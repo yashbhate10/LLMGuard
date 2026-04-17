@@ -13,8 +13,8 @@ print(generated_text)
 print("\n--- Detecting Watermark ---\n")
 tokens = text_to_tokens(generated_text)
 
-result = detect_watermark(tokens, "yash123", 50257)
+result = detect_watermark(tokens, "yash123", generator.vocab_size)
 
-print(f"Green Ratio: {result['green_ratio']:.2f}")
-print(f"Z-Score: {result['z_score']:.2f}")
+print(f"Green Ratio: {result['green_ratio']:.4f}")
+print(f"Z-Score:     {result['z_score']:.4f}")
 print(f"Watermarked: {result['is_watermarked']}")
